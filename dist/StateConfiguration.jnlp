@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="StateConfiguration.jnlp">
+  <information>
+    <title>StateConfiguration</title>
+    <vendor>s_stanis</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <jfx:javafx-runtime version="8.0+" href="http://javadl.sun.com/webapps/download/GetFile/javafx-latest/windows-i586/javafx2.jnlp"/>
+  </resources>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="StateConfiguration.jar" size="109137" download="eager" />
+    <jar href="lib/function-1.0.0.jar" size="10420" download="eager" />
+    <jar href="lib/jaywire-1.1.0.jar" size="40221" download="eager" />
+    <jar href="lib/jfxtras-common-8.0-r4.jar" size="47615" download="eager" />
+    <jar href="lib/jfxtras-menu-8.0-r4.jar" size="13825" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="StateConfiguration" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="stateconfiguration.StateConfiguration"  name="StateConfiguration" />
+  <update check="always"/>
+</jnlp>

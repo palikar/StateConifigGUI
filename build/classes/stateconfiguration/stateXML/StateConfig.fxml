@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane"   fx:controller="stateconfiguration.stateXML.StateConfigController">
+    <padding>
+        <javafx.geometry.Insets top="5" bottom="20" left="20" right="20"></javafx.geometry.Insets> 
+    </padding>
+ 
+    <VBox spacing="10" AnchorPane.topAnchor="0">
+        <padding>
+            <javafx.geometry.Insets top="5" bottom="20" left="20" right="20"></javafx.geometry.Insets> 
+        </padding>
+        <children>
+            <Label  text="Working Pane:" >
+                <font>
+                    <javafx.scene.text.Font name="Arial " size="17.0" />
+                </font>
+            </Label> 
+            <javafx.scene.canvas.Canvas   width="1160" height="400" fx:id="statePane" 
+                                          onMousePressed="#workingPanePressed" 
+                                          onMouseDragged = "#dragged"
+                                          onMouseClicked="#workingPaneClicked" 
+                                          onMouseReleased="#workingPaneReleased" 
+                                          onMouseMoved="#mouseMoved" 
+            >               
+            </javafx.scene.canvas.Canvas>
+            <Separator orientation="HORIZONTAL" /> 
+            <HBox spacing="10" prefHeight="400" >
+                <children>
+                    <VBox spacing="10" >
+                        <children>
+                    
+                            <Label  text="States:" >
+                                <font>
+                                    <javafx.scene.text.Font name="Arial " size="17.0" />
+                                </font>
+                            </Label> 
+                            
+                            <TableView fx:id="statesListView" >
+                             
+                                <columns>
+                                    <TableColumn fx:id="nameColumn"  resizable="false"  prefWidth="250"  sortable="false" text="Name" >
+                                        
+                                    </TableColumn>
+                                </columns>
+                                <columnResizePolicy>
+                                 
+                                </columnResizePolicy>
+                            </TableView>
+                            
+                            <HBox spacing="10" >
+                                <children>
+                                    <Button text="Remove" onAction="#deleteState" >
+                                        <font> 
+                                            <javafx.scene.text.Font name="Arial " size="17.0" />
+                                        </font>
+                                    </Button> 
+                                    <Button text="Remove All" onAction="#clearStates" >
+                                        <font> 
+                                            <javafx.scene.text.Font name="Arial " size="17.0" />
+                                        </font>
+                                    </Button> 
+                                </children>
+                            </HBox>
+                        </children>
+                    </VBox>
+                    
+                    <ScrollPane fitToWidth="true" prefWidth="900"  >
+                        <content>
+                            <fx:include source="StateProperties/StateProperties.fxml"/>
+                        </content>
+                    </ScrollPane>
+                </children>
+            </HBox> 
+                    
+        </children>
+    </VBox> 
+</AnchorPane>

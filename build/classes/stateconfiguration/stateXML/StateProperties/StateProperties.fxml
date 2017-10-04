@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox   spacing="10"    xmlns:fx="http://javafx.com/fxml/1" fx:controller="stateconfiguration.stateXML.StateProperties.StatePropertiesController">
+    <children>
+        <VBox spacing="10" fx:id="stateFields" >
+            <padding>
+                <javafx.geometry.Insets top="5" bottom="5" left="5" right="5"></javafx.geometry.Insets> 
+            </padding>
+            <children>
+                <HBox spacing="10">
+                    <children>
+                        <Label  text="State Name:" >
+                            <font>
+                                <javafx.scene.text.Font name="Arial " size="17.0" />
+                            </font>
+                        </Label> 
+                        <TextField fx:id="stateNameField" > 
+                            <font>
+                                <javafx.scene.text.Font name="Arial " size="17.0" />
+                            </font>
+                        </TextField>
+                    </children>
+                </HBox> 
+                <Separator orientation="HORIZONTAL"/> 
+                
+            </children>
+        </VBox> 
+    </children>
+</HBox>

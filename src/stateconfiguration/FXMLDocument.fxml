@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="AnchorPane" prefHeight="800"  prefWidth="1200" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stateconfiguration.FXMLDocumentController">
+    
+
+    <top> 
+        <VBox BorderPane.alignment="TOP_CENTER">
+            <MenuBar >
+                <Menu text="File">
+                    <items>
+                        <MenuItem text="New Session">
+                            <graphic>
+                                <javafx.scene.image.ImageView fitHeight="16" fitWidth="16"  >
+                                    <javafx.scene.image.Image url="stateconfiguration/resources/newFile.png" />
+                                </javafx.scene.image.ImageView>
+                            </graphic>                
+                        </MenuItem>
+                        <MenuItem text="Open Session">
+                            <graphic>
+                                <javafx.scene.image.ImageView fitHeight="16" fitWidth="16"  >
+                                    <javafx.scene.image.Image url="stateconfiguration/resources/open.png" />
+                                </javafx.scene.image.ImageView>
+                            </graphic>                
+                        </MenuItem>
+                        <MenuItem text="Save Session">
+                            <graphic>
+                                <javafx.scene.image.ImageView fitHeight="16" fitWidth="16"  >
+                                    <javafx.scene.image.Image url="stateconfiguration/resources/save.png" />
+                                </javafx.scene.image.ImageView>
+                            </graphic>                
+                        </MenuItem>
+                  
+                        <SeparatorMenuItem  />
+                        <MenuItem text="Exit">
+                            <graphic>
+                                <javafx.scene.image.ImageView fitHeight="16" fitWidth="16"  >
+                                    <javafx.scene.image.Image url="stateconfiguration/resources/exit.png" />
+                                </javafx.scene.image.ImageView>
+                            </graphic>                
+                        </MenuItem>
+                    </items>
+                </Menu> 
+                <Menu text="Export">
+                    <items>
+                        
+                        <MenuItem text="Generate XML">
+                            <graphic>
+                                <javafx.scene.image.ImageView fitHeight="16" fitWidth="16"  >
+                                    <javafx.scene.image.Image url="stateconfiguration/resources/generateXML.png" />
+                                </javafx.scene.image.ImageView>
+                            </graphic>                
+                        </MenuItem>
+                    </items>
+                </Menu> 
+                <Menu text="Config">
+                    <items>
+                        <MenuItem text="Export Configuration">
+                            <graphic>
+                                <javafx.scene.image.ImageView fitHeight="16" fitWidth="16"  >
+                                    <javafx.scene.image.Image url="stateconfiguration/resources/export.png" />
+                                </javafx.scene.image.ImageView>
+                            </graphic>                
+                        </MenuItem>
+                        <MenuItem text="Import Configuration">
+                            <graphic>
+                                <javafx.scene.image.ImageView fitHeight="16" fitWidth="16"  >
+                                    <javafx.scene.image.Image url="stateconfiguration/resources/import.png" />
+                                </javafx.scene.image.ImageView>
+                            </graphic>                
+                        </MenuItem>
+
+                    </items>
+                </Menu> 
+            </MenuBar>   
+            <TabPane BorderPane.alignment="CENTER" tabClosingPolicy="UNAVAILABLE" >
+                <tabs>
+                    <Tab text="States Configuration"  closable="false" > 
+                        <content>
+                            <fx:include source= "stateXML/StateConfig.fxml"/>
+                        </content>
+                    </Tab>
+                    <Tab text="Configuration"  closable="false" > 
+                    </Tab>
+                </tabs> 
+            </TabPane>
+        </VBox> 
+        
+    </top>
+</BorderPane>
